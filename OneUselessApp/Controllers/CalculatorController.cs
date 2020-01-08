@@ -47,7 +47,7 @@ namespace OneUselessApp.Controllers
             return CrudOperation(paramOne, paramTwo, paramThree).ToString();
 
         }
-
+        // check command 
         public string calculatorSwitch(float fn, float sn, string command)
         {
             switch (command)
