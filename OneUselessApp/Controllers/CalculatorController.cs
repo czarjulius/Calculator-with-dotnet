@@ -7,6 +7,7 @@ using System.Web.Http;
 
 namespace OneUselessApp.Controllers
 {
+    [Route("api/{controller}")]
     public class CalculatorController : ApiController
     {
         public string CrudOperation(float fn, float sn, string op)
@@ -54,22 +55,16 @@ namespace OneUselessApp.Controllers
             {
                 case "add":
                     return (sn + fn).ToString();
-                    break;
                 case "sub":
                     return (sn - fn).ToString();
-                    break;
                 case "div":
                     return (sn / fn).ToString();
-                    break;
                 case "mul":
                     return (sn * fn).ToString();
-                    break;
                 case "sqr":
                     return Math.Pow(fn, sn).ToString();
-                    break;
                 default:
                     return "operation not specifield";
-                    break;
             }
 
         }
